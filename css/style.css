@@ -1,0 +1,206 @@
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 9vh;
+  background-color: rgb(29, 132, 192);
+  font-family:'Monotype', sans-serif;
+  padding: 15px;
+  transition: all 0.5s ease;
+}
+.logo{
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 95%;
+}
+.navList{
+  display: flex;
+  background-color: rgb(29, 132, 192);
+  justify-content: space-around;
+  width: 30%;
+}
+.navList li{
+  list-style: none;
+  margin: 10px;
+}
+.navList li a{
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+.burger{
+  display: none;
+}
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.navList li a:hover{
+  padding: 7px 12px;
+  background: white;
+  color: rgb(29, 132, 192);
+  border-radius: 15px;
+}
+/* card */
+.card{
+  width: 25%;
+  background: white;
+  border: 1px solid rgb(62, 154, 230);
+  margin-bottom: 50px;
+  transition: 0.3s;
+  margin-top: 90px;
+}
+.card-header{
+  text-align: center;
+  padding: 40px 10px;
+  background: linear-gradient(to right,#79b4f7,#2b5dff);
+  color: #fff;
+}
+h3{
+  text-transform: uppercase;
+}
+.card .card-header img{
+  width: 80%;
+  height: 80%;
+  padding: 0;
+  border-radius: 50%;
+}
+.card-body{
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 18px;
+}
+.card-body .btn{
+  display: block;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(to right,#65a9f7,#2b5dff);
+  margin-top: 30px;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 40ox -10px rgba(0, 0, 0, 0.25);
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+}
+.container .row .card-I img{
+  text-align: center;
+  padding: 2%;
+  width: 100%;
+}
+.container .row h2{
+  font-family: monospace;
+  text-align: center;
+  padding: 2%;
+  color: #2b5dff;
+}
+.card-I{
+  width: 70%;
+  background: white;
+  border: 1px solid rgb(62, 154, 230);
+  margin-bottom: 50px;
+  transition: 0.3s;
+  margin-top: 90px;
+}
+.card-body p{
+  padding: 5px;
+}
+
+/* card end */
+.chart{
+  width: 60%;
+  height: 100%;
+  background: white;
+  border: 1px solid rgb(172, 174, 175);
+  margin-bottom: 50px;
+  transition: 0.3s;
+  margin-top: 90px;
+  text-align: center;
+}
+@media screen and (max-width:1024px){
+  .navList{
+    width: 60%;
+  }
+  .card{
+    width: 45%;
+  }
+}
+@media screen and (max-width:768px){
+  body{
+    overflow-x: hidden;
+  }
+  .navList{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 15vh;
+    background-color: rgb(29, 132, 192);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .navList li{
+    opacity: 0;
+  }
+  .burger{
+    display: block;
+  }
+  .card{
+    width: 45%;
+  }
+  .container{
+    width: 100%;
+  }
+}
+.navActive{
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px,-6px);
+}
+.card .card-body audio{
+  width: 100%;
+}
+.card .card-body video{
+  width: 340px;
+  height: 200px;
+}
